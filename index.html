@@ -11,6 +11,8 @@
   <meta name="author" content="Sonu Kumawat">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="/Assets/Css/style.css">
+  <!-- Add AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     .highlight { color: #007bff; }
     .badge-soft-primary { background-color: #e7f1ff; color: #007bff; }
@@ -20,6 +22,34 @@
       box-shadow: 0 0 15px rgba(0,0,0,0.05);
       background-color: white;
       text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .icon-box:hover {
+      transform: translateY(-10px);
+    }
+    /* Add custom animation classes */
+    .zoom-in-out {
+      animation: zoomInOut 2s infinite alternate;
+    }
+    @keyframes zoomInOut {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.05); }
+    }
+    /* Add more custom animations */
+    .float-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    .rotate-slow {
+      animation: rotate 20s linear infinite;
+    }
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
   </style>
 </head>
@@ -60,9 +90,9 @@
   <div class="container">
     <div class="row align-items-center">
       <!-- Left Content -->
-      <div class="col-lg-6">
-        <span class="badge badge-soft-primary mb-3 px-3 py-2 rounded-pill">  <i class="bi bi-gear-fill"></i> Trusted CA Solutions</span>
-        <h1 class="display-5 fw-bold">
+      <div class="col-lg-6" data-aos="zoom-in" data-aos-duration="1200">
+        <span class="badge badge-soft-primary mb-3 px-3 py-2 rounded-pill" data-aos="flip-up" data-aos-delay="300">  <i class="bi bi-gear-fill"></i> Trusted CA Solutions</span>
+        <h1 class="display-5 fw-bold" data-aos="fade-up" data-aos-delay="400">
           Expert <span class="highlight">Chartered Accountant</span> Services<br> for You and Your Business
         </h1>
       
@@ -70,13 +100,15 @@
         <p class="mt-3 mb-4">
           We specialize in ITR filing, GST, company registration, auditing, and compliance — serving individuals and businesses PAN India.
         </p>
-        <a href="#contact" class="btn btn-primary me-3 book-now">Book Now</a>
+        <div class="d-flex gap-3">  
+        <button class="button-64" role="button"><span class="text">Book Now</span></button>
         <a href="tel:+91XXXXXXXXXX" class="btn btn-outline-secondary"><i class="bi bi-play-circle-fill"></i> Call Us</a>
+      </div>
       </div>
 
       <!-- Right Image -->
-      <div class="col-lg-6 text-center">
-        <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" class="img-fluid" alt="CA Services Illustration" width="500">
+      <div class="col-lg-6 text-center" data-aos="flip-left" data-aos-duration="1500">
+        <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" class="img-fluid zoom-in-out" alt="CA Services Illustration" width="500">
       </div>
     </div>
   </div>
@@ -86,28 +118,28 @@
 <section class="py-5 bg-white">
   <div class="container">
     <div class="row text-center g-4">
-      <div class="col-md-3">
+      <div class="col-md-3" data-aos="flip-up" data-aos-delay="100">
         <div class="icon-box">
           <div><i class="bi bi-file-earmark-text fs-1 text-primary"></i></div>
           <h5 class="mt-2">ITR Filing</h5>
           <p class="text-muted small">Quick & accurate income tax returns.</p>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3" data-aos="flip-up" data-aos-delay="200">
         <div class="icon-box">
           <div><i class="bi bi-receipt fs-1 text-primary"></i></div>
           <h5 class="mt-2">GST Registration</h5>
           <p class="text-muted small">Get your business GST ready in 48 hrs.</p>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3" data-aos="flip-up" data-aos-delay="300">
         <div class="icon-box">
           <div><i class="bi bi-building fs-1 text-primary"></i></div>
           <h5 class="mt-2">Company Setup</h5>
           <p class="text-muted small">Private Limited, LLP & MSME registration.</p>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3" data-aos="flip-up" data-aos-delay="400">
         <div class="icon-box">
           <div><i class="bi bi-check2-circle fs-1 text-primary"></i></div>
           <h5 class="mt-2">Audit & Compliance</h5>
@@ -122,18 +154,18 @@
     <div class="row align-items-center">
       
       <!-- Left Content -->
-      <div class="col-lg-6">
-        <h6 class="text-primary fw-bold">OUR CA SERVICES</h6>
-        <h2 class="fw-bold mb-3">Providing Trusted Chartered Accountancy Services</h2>
-        <p class="text-muted">We specialize in offering expert accounting, auditing, and tax services tailored to the unique needs of individuals and businesses. Our team of experienced Chartered Accountants ensures accuracy, compliance, and timely delivery of financial solutions.</p>
+      <div class="col-lg-6" data-aos="zoom-in" data-aos-duration="1200">
+        <h6 class="text-primary fw-bold" data-aos="flip-up" data-aos-delay="200">OUR CA SERVICES</h6>
+        <h2 class="fw-bold mb-3" data-aos="fade-up" data-aos-delay="300">Providing Trusted Chartered Accountancy Services</h2>
+        <p class="text-muted" data-aos="fade-up" data-aos-delay="400">We specialize in offering expert accounting, auditing, and tax services tailored to the unique needs of individuals and businesses. Our team of experienced Chartered Accountants ensures accuracy, compliance, and timely delivery of financial solutions.</p>
         
         <div class="row gy-3 mt-4">
-          <div class="col-sm-6">
+          <div class="col-sm-6" data-aos="fade-right" data-aos-delay="500">
             <p><i class="bi bi-check-circle-fill text-primary me-2"></i> Tax Consultancy and Planning</p>
             <p><i class="bi bi-check-circle-fill text-primary me-2"></i> Financial Statement Preparation</p>
             <p><i class="bi bi-check-circle-fill text-primary me-2"></i> Business Valuation and Mergers</p>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-6" data-aos="fade-left" data-aos-delay="600">
             <p><i class="bi bi-check-circle-fill text-primary me-2"></i> GST and Income Tax Filing</p>
             <p><i class="bi bi-check-circle-fill text-primary me-2"></i> Audit and Assurance Services</p>
             <p><i class="bi bi-check-circle-fill text-primary me-2"></i> Corporate Financial Consulting</p>
@@ -143,8 +175,8 @@
         <!-- Profile + Call Box -->
         <div class="d-flex align-items-center justify-content-start gap-4 flex-wrap mt-4">
           <!-- Profile Box -->
-          <div class="d-flex align-items-center gap-3">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkAJEkJQ1WumU0hXNpXdgBt9NUKc0QDVIiaw&s" alt="Ravi Kumar" class="rounded-circle" width="60" height="60">
+          <div class="d-flex align-items-center gap-3" data-aos="flip-left" data-aos-delay="700">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkAJEkJQ1WumU0hXNpXdgBt9NUKc0QDVIiaw&s" alt="Ravi Kumar" class="rounded-circle float-animation" width="60" height="60">
             <div>
               <h6 class="mb-0 fw-semibold">Poonia & Soni</h6>
               <small class="text-primary">CEO &amp; Senior Chartered Accountant</small>
@@ -152,8 +184,8 @@
           </div>
 
           <!-- Call Box -->
-          <div class="call-box d-flex align-items-center gap-3 shadow-sm p-3 bg-white rounded-3">
-            <div class="icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+          <div class="call-box d-flex align-items-center gap-3 shadow-sm p-3 bg-white rounded-3" data-aos="flip-right" data-aos-delay="800">
+            <div class="icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center rotate-slow" style="width: 40px; height: 40px;">
               <i class="bi bi-telephone-fill"></i>
             </div>
             <div>
@@ -162,30 +194,164 @@
             </div>
           </div>
         </div>
-      </div> <!-- ✅ Close Left Column -->
+      </div>
 
       <!-- Right Image -->
-      <div class="col-lg-6 position-relative mt-5 mt-lg-0">
+      <div class="col-lg-6 position-relative mt-5 mt-lg-0" data-aos="zoom-in-left" data-aos-duration="1500">
         <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df" alt="CA Office" class="img-fluid rounded">
-        <div class="position-absolute top-50 start-50 translate-middle p-3 text-white rounded-3 shadow" style="min-width: 180px; background: rgba(0, 123, 255, 0.2); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
-
+        <div class="position-absolute top-50 start-50 translate-middle p-3 text-white rounded-3 shadow float-animation" style="min-width: 180px; background: rgba(0, 123, 255, 0.2); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
           <h3 class="mb-0">15+ <small class="fs-6">Years</small></h3>
           <small>Experience in Chartered Accountancy Services</small>
         </div>
       </div>
 
-    </div> <!-- ✅ Close Row -->
-  </div> <!-- ✅ Close Container -->
+    </div>
+  </div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="zoom-in">
+      <h2 class="fw-bold">Client Testimonials</h2>
+      <p class="text-muted">What our happy clients say about our services</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="flip-right" data-aos-delay="100">
+        <div class="bg-white shadow rounded-4 p-4 h-100">
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://i.pravatar.cc/60?img=11" class="rounded-circle me-3" width="50" height="50" alt="Client">
+            <div>
+              <h6 class="mb-0 fw-semibold">Rahul Verma</h6>
+              <small class="text-muted">Business Owner</small>
+            </div>
+          </div>
+          <p class="text-muted fst-italic">
+            <i class="bi bi-quote quote-icon-left"></i>
+            Very professional and quick service. Got my GST registration in just 2 days!
+            <i class="bi bi-quote quote-icon-right"></i>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="flip-right" data-aos-delay="200">
+        <div class="bg-white shadow rounded-4 p-4 h-100">
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://i.pravatar.cc/60?img=32" class="rounded-circle me-3" width="50" height="50" alt="Client">
+            <div>
+              <h6 class="mb-0 fw-semibold">Sneha Patil</h6>
+              <small class="text-muted">Freelancer</small>
+            </div>
+          </div>
+          <p class="text-muted fst-italic">
+            <i class="bi bi-quote quote-icon-left"></i>
+            They took care of my ITR without any hassle. Highly recommend them!
+            <i class="bi bi-quote quote-icon-right"></i>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="flip-right" data-aos-delay="300">
+        <div class="bg-white shadow rounded-4 p-4 h-100">
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://i.pravatar.cc/60?img=25" class="rounded-circle me-3" width="50" height="50" alt="Client">
+            <div>
+              <h6 class="mb-0 fw-semibold">Amit Jain</h6>
+              <small class="text-muted">Startup Founder</small>
+            </div>
+          </div>
+          <p class="text-muted fst-italic">
+            <i class="bi bi-quote quote-icon-left"></i>
+            Helped me with company incorporation and compliance from scratch.
+            <i class="bi bi-quote quote-icon-right"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="text-white cta-section">
+  <div class="inner-cta-section py-5">
+    <div class="container text-center position-relative">
+      <div class="cta-overlay"></div>
+      <h2 class="fw-bold mb-3 display-4" data-aos="zoom-in">Need Expert CA Assistance?</h2>
+      <p class="mb-4 lead fs-4" data-aos="fade-up" data-aos-delay="200">Schedule your free consultation with our chartered accountants now.</p>
+      <a href="#contact" class="btn btn-light btn-lg px-5 py-3 shadow-sm rounded-pill" data-aos="flip-up" data-aos-delay="300">Book Free Consultation</a>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Preview -->
+<section class="py-5 bg-white border-top">
+  <div class="container text-center">
+    <div class="mb-4" data-aos="zoom-in">
+      <i class="bi bi-envelope-paper-fill fs-1 text-primary rotate-slow"></i>
+    </div>
+    <h2 class="fw-bold" data-aos="fade-up" data-aos-delay="200">Ready to Work With Us?</h2>
+    <p class="text-muted mb-4" data-aos="fade-up" data-aos-delay="300">Let's discuss your needs. We are just one call away from simplifying your finances.</p>
+    <a href="#contact" class="btn btn-outline-primary px-4 py-2" data-aos="flip-up" data-aos-delay="400">Contact Us</a>
+  </div>
 </section>
 
 <!-- Footer -->
-<footer class="py-4 bg-light mt-5">
-  <div class="container text-center">
-    <p class="mb-1">© 2025 YourCA. All rights reserved.</p>
-    <small><a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms & Conditions</a></small>
+<footer class="py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <!-- Left Side: Contact Info -->
+      <div class="col-md-4 mb-4" data-aos="fade-right">
+        <h5>Contact</h5>
+        <p><i class="bi bi-geo-alt-fill"></i> D-82-B, Krishna, Siwar Area, Bapu Nagar, Jaipur, Rajasthan 302015</p>
+        <p><i class="bi bi-telephone-fill"></i> +91 9314507298</p>
+        <p><i class="bi bi-envelope-fill"></i> PooniaandSoni@gmail.com</p>
+      </div>
+
+      <!-- Center: Useful Links -->
+      <div class="col-md-4 mb-4" data-aos="fade-up">
+        <h5>Useful Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="/" class="text-dark">Home</a></li>
+          <li><a href="#about" class="text-dark">About</a></li>
+          <li><a href="#services" class="text-dark">Services</a></li>
+          <li><a href="#terms" class="text-dark">Terms of Service</a></li>
+          <li><a href="#privacy" class="text-dark">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Right Side: Services -->
+      <div class="col-md-4 mb-4" data-aos="fade-left">
+        <h5>Our Services</h5>
+        <ul class="list-unstyled">
+          <li><a href="#web-design" class="text-dark">Web Design</a></li>
+          <li><a href="#web-dev" class="text-dark">Web Development</a></li>
+          <li><a href="#product-management" class="text-dark">Product Management</a></li>
+          <li><a href="#marketing" class="text-dark">Marketing</a></li>
+          <li><a href="#graphic-design" class="text-dark">Graphic Design</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="text-center mt-4" data-aos="fade-up">
+      <hr>
+      <p class="mb-1">© 2025 Poonia & Soni Chartered Accountants. All rights reserved.</p>
+      <small>
+        <a href="#privacy" class="text-dark">Privacy Policy</a> | 
+        <a href="#terms" class="text-dark">Terms & Conditions</a>
+      </small>
+    </div>
   </div>
 </footer>
 
+<!-- Add AOS JS before closing body tag -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: false, // animations happen every time you scroll
+    offset: 50, // offset (in px) from the original trigger point
+    duration: 1000, // values from 0 to 3000, with step 50ms
+    easing: 'ease-in-out-cubic', // more dynamic easing
+    mirror: true, // whether elements should animate out while scrolling past them
+    anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+  });
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
