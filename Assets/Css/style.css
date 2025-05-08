@@ -3,7 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+:root{
+  --primary-color: #6958b5;
+  --secondary-color: #6958b5;
+  --tertiary-color: #ff5c24;
+}
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -43,9 +47,9 @@ body {
   }
   .icon-box i {
     background: #a8d4e540;
-    padding: 12px;
+    padding: 12px 14px;
     border-radius: 50%;
-    color: #0d6efd; /* optional: icon color */
+    color: var(--primary-color); /* optional: icon color */
     transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
   }
   
@@ -69,6 +73,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
   }
   .inner-cta-section{
     background: #030306b3;
@@ -140,4 +145,24 @@ body {
   position: relative;
   font-size: 21px;
   color: #ff5c24;
+}
+.bi-play-circle-fill{
+  font-size: 30px;
+  padding-right: 10px;
+  color: #007bff;
+}
+
+.call-us:hover{
+  background-color: rgb(5 6 45)!important;
+  color: white!important;
+}
+
+.cta-btn-center {
+  display: block;
+  margin: 0 auto;
+  max-width: 350px;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 50px;
 }
